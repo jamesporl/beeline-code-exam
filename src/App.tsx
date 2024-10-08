@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from './components/Button/Button';
 import { User } from './types/user';
-import './App.css';
 import Tag from './components/Tag/Tag';
+import './App.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ function App() {
       const resp = await axios.get('https://jsonplaceholder.typicode.com/users');
       const respData = resp.data;
       setUsers(respData);
-    } catch (error) {  // eslint-disable-line @typescript-eslint/no-unused-vars
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
       setHasErrored(true);
     }
     setIsLoading(false);
@@ -168,14 +168,18 @@ function App() {
           </div>
         </div>
         <table className="table-users">
-          <tr>
-            <th align="center" style={{ width: '5%' }}>ID</th>
-            <th align="left" style={{ width: '20%' }}>Name</th>
-            <th align="left" style={{ width: '25%' }}>Credentials</th>
-            <th align="left" style={{ width: '25%' }}>Contact</th>
-            <th align="left" style={{ width: '25%' }}>Company</th>
-          </tr>
-          {tableRows}
+          <thead>
+            <tr>
+              <th align="center" style={{ width: '5%' }}>ID</th>
+              <th align="left" style={{ width: '20%' }}>Name</th>
+              <th align="left" style={{ width: '25%' }}>Credentials</th>
+              <th align="left" style={{ width: '25%' }}>Contact</th>
+              <th align="left" style={{ width: '25%' }}>Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableRows}
+          </tbody>
         </table>
       </div>
     </>
