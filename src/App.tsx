@@ -32,7 +32,7 @@ function App() {
     if (showWarning) {
       const timeoutId = setTimeout(() => {
         setShowWarning(false);
-      }, 10000);
+      }, 1000);
 
       return () => clearTimeout(timeoutId);
     }
