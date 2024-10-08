@@ -1,0 +1,75 @@
+.header {
+  background-color: white;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #efefef;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-2 .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.table-users {
+  margin-top: 1rem;
+
+}
+
+.table-users .with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.table-users .with-icon.address {
+  align-items: flex-start;
+}
+
+.table-users .with-icon.address img {
+  margin-top: 3px;
+}
+
+.table-users th,
+.table-users td {
+  padding: 0.5rem 0.25rem;
+  color: black;
+}
+
+.table-users th {
+  background-color: #efefef;
+}
+
+.table-users .tags-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.warning-container {
+  display: flex;
+  justify-content: center;
+}
+
+.warning {
+  background-color: orange;
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
